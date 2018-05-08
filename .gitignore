@@ -1,0 +1,11 @@
+.idea
+__pycache__
+migrations/
+upload/
+db/
+*.pyc
+.webassets-*
+console/app/static/public/css/*
+console/app/static/public/js/*
+config.json
+start.sh

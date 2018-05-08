@@ -1,0 +1,51 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}iGuard{% endblock %}
+
+{% block head %}
+
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/login.css") }}">
+    {% assets "common_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+    {% endassets %}
+{% endblock %}
+
+
+{% block content %}
+    {% include "toast_success_or_error.html" %}
+
+    <div class="banner">
+        <div class="widthLimit">
+            <h1>
+                <span><i class="fa fa-skyatlas"></i> iGuard</span>
+            </h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="widthLimit">
+            <div class="loginForm" style="padding: 25px;">
+                <div class="login_title">
+                    <span>账号登录</span>
+                </div>
+                <form method="post">
+                    {{ form.hidden_tag() }}
+                    <div style="margin-top: 50px">{{ form.username(class="fm-text") }}</div>
+                    <div class="margin-top-20">{{ form.password(class="fm-text") }}</div>
+                    <div class="margin-top-20">{{ form.remember_me() }} {{ form.remember_me.label }}</div>
+                    <div class="margin-top-20">{{ form.submit(class="fm-button") }}</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+    {{ super() }}
+    {% assets "common_js" %}
+        <script src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}

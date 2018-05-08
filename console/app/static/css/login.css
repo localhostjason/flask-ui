@@ -1,0 +1,111 @@
+.banner {
+    background-color: #111214;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.widthLimit {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.widthLimit h1 {
+    position: relative;
+    top: auto;
+    color: #ffffff;
+    font-size: 28px;
+    padding: 0;
+    margin: 8px 0;
+}
+
+.content {
+    background-color: #F4F4F4;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    min-height: 500px;
+    min-width: 860px;
+    overflow: auto;
+    bottom: 0;
+}
+
+.loginForm {
+    max-width: 440px;
+    margin: auto;
+    height: 370px;
+    background-color: #fff;
+    font-size: 14px;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0;
+    box-shadow: 0 0 18px rgba(129, 132, 149, 1);
+    margin-top: 8% !important;
+}
+
+.login_title > span {
+    font-size: 18px;
+    color: #373D41;
+    line-height: 24px;
+    width: 100px;
+}
+
+.fm-text:focus, .fm-text:hover {
+    border-color: #00C1DE;
+}
+
+.fm-text {
+    background: #FFF;
+    border: 1px solid #D7D8D9;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #aaaaaa;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #aaaaaa;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #aaaaaa;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #aaaaaa;
+}
+
+.fm-button {
+    background: #00C1DE;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 0;
+    width: 100%;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.fm-button:hover {
+    background-color: #00b7d3;
+    border-color: #00b7d3;
+}
+
+label {
+    font-weight: normal;
+}
+
+input[name="remember_me"] {
+    position: relative;
+    top: 2px;;
+}

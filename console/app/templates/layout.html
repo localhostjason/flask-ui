@@ -1,0 +1,110 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}FM{% endblock %}
+
+{% block head %}
+
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    {% assets "common_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+    {% endassets %}
+
+{% endblock %}
+
+
+{% block navbar %}
+    <div class="header">
+        <div class="topnav">
+            <h1>
+                <a href="/" class="logo"><i class="fa fa-skyatlas"></i> FM</a>
+            </h1>
+            <div class="top-panel">
+                {% if current_user.is_authenticated %}
+                    <ul class="top-menu pandect-menu">
+                        <li class="custom-item {% block main %}{% endblock %}">
+                            <a href="#"><i class="fa fa-users"></i> Main</a>
+                        </li>
+                    </ul>
+                {% endif %}
+
+
+                <ul class="nav navbar-nav navbar-right pull-right" style="margin: 0;">
+                    {% if current_user.is_authenticated %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                {% if current_user.is_authenticated %}
+                                    <i class="glyphicon glyphicon-user"></i>&nbsp;{{ current_user.username }}
+                                {% endif %} <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">账号信息</a></li>
+                                {#                                <li><a href="#">修改密码</a></li>#}
+                                <li><a href="{{ url_for('auth.logout') }}">注销</a></li>
+                            </ul>
+                        </li>
+                    {% endif %}
+                </ul>
+                <ul class="top-menu user-menu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="aside">
+        <div class="menu">
+            <h2><span>Main</span></h2>
+            <hr class="line-mod">
+            <dl class="menu-list">
+
+
+                <dd class="act">
+                    <a class="menu-lv2 menu-lv2-toggle {% block main_index_open %}{% endblock %}"
+                       href="javascript:void(0);">
+                        <span>Dashboard</span>
+                        <i class="white-down-icon"></i>
+                    </a>
+
+                    <ul class="menu-sub menu-sub-disbale">
+                        <li>
+                            <a href="{{ url_for('main.dashboard') }}"
+                               class="menu-lv3 {% block main_index_active %}{% endblock %}">
+                                <i class="ico-dot"></i><span>dashboardV1.0</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </dd>
+
+                <dd>
+                    <a href="{{ url_for('main.test') }}" class="menu-lv2 {% block main_test_active %}{% endblock %}">
+                        <span>test</span>
+                    </a>
+                </dd>
+
+
+            </dl>
+        </div>
+        <a href="javascript:void(0)" class="btn-fold-menu" title="收起">收起</a>
+    </div>
+
+    <div class="container-fluid-base" style="left: 0">
+        {% block base_content %}{% endblock %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+
+    {{ super() }}
+    {{ moment.include_moment('2.10.3', '/static/vendor/moment/moment-with-locales.min.js') }}
+    {% assets "common_js" %}
+        <script src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+    <script src="{{ url_for("static", filename="js/modal.js") }}"></script>
+{% endblock %}
+
+

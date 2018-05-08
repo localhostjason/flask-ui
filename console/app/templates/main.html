@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block main %}cur{% endblock %}
+
+{% block head %}
+
+    {{ super() }}
+    <style>
+        .menu-sub.menu-sub-disbale {
+            display: none;
+            border-bottom: 1px solid #cadbe6;
+        }
+    </style>
+{% endblock %}
+
+
+{% block page_content %}
+
+    <div class="main">
+        {% block main_content %}{% endblock %}
+    </div>
+{% endblock %}

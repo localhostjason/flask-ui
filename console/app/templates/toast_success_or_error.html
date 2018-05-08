@@ -1,0 +1,41 @@
+{% macro render_message(message_data) %}
+    {% if message_data is mapping %}
+        {% for key, info in message_data.items() %}
+            {% for val in info %}
+                <p>{{ val }}</p>
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        {{ message_data }}
+    {% endif %}
+{% endmacro %}
+
+{% for message in get_flashed_messages() -%}
+    <div id="toast-container" class="toast-top-right dis_pos">
+        <div class="toast {% if message.errors %} toast-error {% elif message.warning %} toast-warning {% elif message.success %} toast-success {% else %} toast-info {% endif %}"
+             aria-live="polite" style="display: block;">
+
+            <button type="button" class="toast-close-button dis_show" role="button">×</button>
+
+            <div class="toast-message">
+                {% if message.errors %}
+
+                    {{ render_message(message.errors) }}
+
+                {% elif message.warning %}
+
+                    {{ render_message(message.warning) }}
+
+                {% elif message.success %}
+
+                    {{ render_message(message.success) }}
+
+                {% else %}
+
+                    {{ render_message(message.info) }}
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{%- endfor %}
