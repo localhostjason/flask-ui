@@ -1,60 +1,23 @@
 {% extends "base.html" %}
+{% from 'macro_html.html' import aside_dd_html, aside_dd_ul_html,aside_title %}
 
 {% block main %}cur{% endblock %}
-
-{% block head %}
-
-    {{ super() }}
-    <style>
-        .menu-sub.menu-sub-disbale {
-            display: none;
-            border-bottom: 1px solid #cadbe6;
-        }
-    </style>
-{% endblock %}
+{% set active_page = active_page|default('index') %}
+{% set menuv2_page_open = menuv2_page_open|default('close') %}
 
 
 {% block page_content %}
     <div class="aside">
         <div class="aside-menu">
-            <div class="aside-head">
-                <div class="aside-head-logo">
-                    <span class="aside-head-logo-ficon"><i class="fa fa-skyatlas"></i></span>
-                    <h3 class="aside-head-title">表格</h3>
-                </div>
-            </div>
+            {{ aside_title('表格') }}
             <dl class="aside-menu-dl">
 
+                {% set menu1 = [
+                    ('main.index', '表格-01', True if active_page == 'index')
+                ] %}
 
-                <dd class="act">
-                    <a class="aside-menu-v2 aside-menu-v2-toggle {% block main_index_open %}{% endblock %}"
-                       href="javascript:void(0);">
-                        <span>表格展示</span>
-                        <i class="white-down-icon"></i>
-                    </a>
-
-                    <ul class="aside-menu-sub aside-menu-sub-disable">
-                        <li>
-                            <a href="{{ url_for('main.index') }}"
-                               class="aside-menu-v3 {% block main_index_active %}{% endblock %}">
-                                <i class="ico-dot"></i><span>表格-01</span>
-                            </a>
-                            <a href="#" class="aside-menu-v3">
-                                <i class="ico-dot"></i><span>表格-02</span>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </dd>
-
-                <dd>
-                    <a href="{{ url_for('main.menu_list') }}"
-                       class="aside-menu-v2 {% block main_menu_active %}{% endblock %}">
-                        <span>菜单管理</span>
-                    </a>
-                </dd>
-
+                {{ aside_dd_ul_html('表格展示', menu1, True if menuv2_page_open == 'open') }}
+                {{ aside_dd_html('菜单管理', 'main.menu_list', True if active_page == 'menu') }}
 
             </dl>
         </div>

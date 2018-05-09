@@ -1,0 +1,40 @@
+{% macro aside_title(title) -%}
+    <div class="aside-head">
+        <div class="aside-head-logo">
+            <span class="aside-head-logo-ficon"><i class="fa fa-skyatlas"></i></span>
+            <h3 class="aside-head-title">{{ title }}</h3>
+        </div>
+    </div>
+{% endmacro %}
+
+
+{% macro aside_dd_ul_html(title, url_list, open) -%}
+    <dd class="act">
+        <a class="aside-menu-v2 aside-menu-v2-toggle {% if open %}open{% endif %}"
+           href="javascript:void(0);">
+            <span>{{ title }}</span>
+            <i class="white-down-icon"></i>
+        </a>
+
+        <ul class="aside-menu-sub aside-menu-sub-disable">
+            <li>
+                {% for url, name, url_act in url_list %}
+                    <a href="{{ url_for(url) }}"
+                       class="aside-menu-v3 {% if url_act %}act{% endif %}">
+                        <i class="ico-dot"></i><span>{{ name }}</span>
+                    </a>
+                {% endfor %}
+            </li>
+        </ul>
+    </dd>
+{% endmacro %}
+
+
+{% macro aside_dd_html(title, url, act) -%}
+    <dd>
+        <a href="{{ url_for(url) }}"
+           class="aside-menu-v2 {% if act %}act{% endif %}">
+            <span>菜单管理</span>
+        </a>
+    </dd>
+{% endmacro %}
