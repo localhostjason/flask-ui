@@ -2,7 +2,6 @@
     position: relative;
     width: 180px;
     background-color: #f0f6f6;
-    border-right: 1px solid #cedfea;
     display: inline-block;
     height: 100%;
     vertical-align: top;
@@ -44,7 +43,7 @@
     overflow: auto;
     position: absolute;
     width: 100%;
-    top: 125px;
+    top: 113px;
     bottom: 0;
     padding-top: 15px;
 }
@@ -190,10 +189,10 @@
 
 /*aside*/
 .aside-head {
-    padding: 15px 0 65px 0;
+    padding: 15px 0 53px 0;
     text-align: center;
     box-sizing: border-box;
-    background-color: #D9DEE4;
+    background-color: #f0f2f5;
 }
 
 .aside-head-logo {
@@ -212,6 +211,6 @@
     line-height: 1;
     margin: 10px 40px 0;
     word-wrap: break-word;
-    color: #666;
-    font-weight: 400;
+    color: #3d91ff;
+    font-weight: 700;
 }
