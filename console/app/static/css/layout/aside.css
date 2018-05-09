@@ -189,10 +189,11 @@
 
 /*aside*/
 .aside-head {
-    padding: 15px 0 53px 0;
+    padding: 15px 0 52px 0;
     text-align: center;
     box-sizing: border-box;
     background-color: #f0f2f5;
+    border-bottom: 1px solid #f0f6f6;
 }
 
 .aside-head-logo {
