@@ -8,11 +8,11 @@ from . import main
 @main.route('/main')
 @main.route('/')
 @login_required
-def dashboard():
-    return render_template('main/main.html')
+def index():
+    return render_template('main/index.html')
 
 
-@main.route('/test')
+@main.route('/menu')
 @login_required
-def test():
-    return render_template('main/test.html')
+def menu_list():
+    return render_template('main/menu.html')

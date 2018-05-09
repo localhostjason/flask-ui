@@ -7,7 +7,8 @@ common_css = Bundle(
     'vendor/toastr/toastr.min.css',
     'vendor/font-awesome/css/font-awesome.min.css',
     'css/app.css',
-    'css/main.css',
+    'css/comment/*',
+    'css/layout/*',
     filters='cssmin',
     output='public/css/common.css',
 )

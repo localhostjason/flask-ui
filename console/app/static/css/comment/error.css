@@ -1,0 +1,16 @@
+.error-page {
+    width: 800px;
+    text-align: center;
+    margin: 100px auto 0;
+    padding: 50px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+}
+
+.error-page h2 {
+    font-size: 40px;
+    font-weight: bold;
+}

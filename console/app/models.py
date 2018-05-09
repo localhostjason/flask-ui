@@ -5,8 +5,6 @@ from flask import request, current_app
 from flask_login import current_user
 from datetime import datetime
 from . import db, login_manager
-from sqlalchemy import func
-import enum
 
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 
@@ -69,11 +67,6 @@ class BaseModelFunc:
                 result[k] = v
 
         return result
-
-
-class Theme(enum.Enum):
-    default = '默认'
-    black = '黑色'
 
 
 class User(UserBaseMixin, UserMixin, BaseModelFunc, db.Model):

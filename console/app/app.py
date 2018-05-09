@@ -6,7 +6,7 @@ from flask_login import LoginManager
 from flask_babel import Babel
 from flask_moment import Moment
 from .assets import assets_env, bundles
-from .error_handle import Ehandle
+from .error_handle import ErrorHandler
 
 from config import Config
 from .jinja_env import JinjaEnv
@@ -15,7 +15,7 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 babel = Babel()
 moment = Moment()
-error_handle = Ehandle()
+error_handler = ErrorHandler()
 
 jinja_env = JinjaEnv()
 
@@ -43,7 +43,7 @@ def create_app():
     assets_env.init_app(app)
     assets_env.register(bundles)
 
-    error_handle.init_app(app)
+    error_handler.init_app(app)
 
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint, url_prefix='/auth')

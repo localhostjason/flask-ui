@@ -7,5 +7,5 @@ db/
 .webassets-*
 console/app/static/public/css/*
 console/app/static/public/js/*
-config.json
+#config.json
 start.sh

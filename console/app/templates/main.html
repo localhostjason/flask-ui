@@ -15,8 +15,46 @@
 
 
 {% block page_content %}
+    <div class="aside">
+        <div class="aside-menu">
+            <h2><span>表格</span></h2>
+            <hr class="line-mod">
+            <dl class="aside-menu-dl">
 
+
+                <dd class="act">
+                    <a class="aside-menu-v2 aside-menu-v2-toggle {% block main_index_open %}{% endblock %}"
+                       href="javascript:void(0);">
+                        <span>表格展示</span>
+                        <i class="white-down-icon"></i>
+                    </a>
+
+                    <ul class="aside-menu-sub aside-menu-sub-disable">
+                        <li>
+                            <a href="{{ url_for('main.index') }}"
+                               class="aside-menu-v3 {% block main_index_active %}{% endblock %}">
+                                <i class="ico-dot"></i><span>表格-01</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </dd>
+
+                <dd>
+                    <a href="{{ url_for('main.menu_list') }}"
+                       class="aside-menu-v2 {% block main_menu_active %}{% endblock %}">
+                        <span>菜单管理</span>
+                    </a>
+                </dd>
+
+
+            </dl>
+        </div>
+        <a href="javascript:void(0)" class="btn-fold-menu" title="收起">收起</a>
+    </div>
     <div class="main">
-        {% block main_content %}{% endblock %}
+        <div class="console-container">
+            {% block main_content %}{% endblock %}
+        </div>
     </div>
 {% endblock %}

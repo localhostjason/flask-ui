@@ -34,11 +34,42 @@ li {
 }
 
 /* a */
-a:hover {
-    color: #039;
-}
 
 a {
-    color: #06C;
     cursor: pointer;
+}
+
+a, a:hover, a:focus, a:active {
+    color: #3399ff;
+}
+
+.console-title h5 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.console-title h1,
+.console-title h2,
+.console-title h3,
+.console-title h4,
+.console-title h5,
+.console-title h6 {
+    display: inline-block;
+    text-indent: 8px;
+    border-left: 2px solid #3399ff;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 8px;
+    vertical-align: top;
+    font-weight: 700;
+    color: #555;
+}
+
+.bline {
+    border-bottom: 1px solid #eee;
+}
+
+.console-title {
+    padding: 16px 0;
+    min-height: 48px;
 }

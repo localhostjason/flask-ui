@@ -62,7 +62,7 @@ $(document).ready(function () {
     });
 
 
-    var toggle_menu = $('.menu-lv2-toggle');
+    var toggle_menu = $('.aside-menu-v2-toggle');
 
     toggle_menu.each(function (index, el) {
         $(this).click(function () {
