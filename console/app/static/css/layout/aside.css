@@ -44,7 +44,7 @@
     overflow: auto;
     position: absolute;
     width: 100%;
-    top: 50px;
+    top: 125px;
     bottom: 0;
     padding-top: 15px;
 }
@@ -70,6 +70,11 @@
     color: #4093ff;
     background-color: #d5e2ef;
     text-decoration: none;
+}
+
+.aside-menu-dl .aside-menu-v2:hover {
+    background-color: #bacde0;
+    color: #586376;
 }
 
 .aside-menu a {
@@ -181,4 +186,32 @@
     border-left: none;
     border-radius: 0 3px 3px 0;
     background: url(/static/img/header-menu.png) -87px -40px no-repeat #f0f6f6;
+}
+
+/*aside*/
+.aside-head {
+    padding: 15px 0 65px 0;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #D9DEE4;
+}
+
+.aside-head-logo {
+    height: 60px;
+}
+
+.aside-head-logo .aside-head-logo-ficon {
+    font-size: 60px;
+    line-height: 60px;
+    color: #666;
+    vertical-align: middle;
+}
+
+.aside-head-logo .aside-head-title {
+    font-size: 20px;
+    line-height: 1;
+    margin: 10px 40px 0;
+    word-wrap: break-word;
+    color: #666;
+    font-weight: 400;
 }
