@@ -1,0 +1,23 @@
+.form-group {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.form-control {
+    height: 32px;
+    border-radius: 0;
+    padding: 6px;
+    -webkit-transition: none;
+    transition: none;
+    font-size: 12px;
+}
+
+input[type=checkbox], input[type=radio] {
+    position: relative;
+    top: 2px;
+}
+
+.form-control[disabled] {
+    background-color: #f5f5f5;
+    cursor: default;
+}
