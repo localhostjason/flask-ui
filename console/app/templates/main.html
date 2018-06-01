@@ -1,23 +1,32 @@
 {% extends "base.html" %}
-{% from 'macro_html.html' import aside_menu_one, aside_menu_list,aside_title %}
+{% from 'macro/macro_aside.html' import aside_menu_one, aside_menu_list,aside_header, aside_menu_title %}
 
 {% block main %}cur{% endblock %}
+
 {% set active = active | default('index') %}
 {% set menu_open = menu_open | default('close') %}
+
+{% set table_menu = [
+('表格-01', 'main.index', active == 'index'),
+] %}
+
+{% set menu_menu = [('菜单管理', 'main.menu_list', active == 'menu')] %}
 
 
 {% block page_content %}
     <div class="aside">
         <div class="aside-menu">
-            {{ aside_title('表格') }}
+            {{ aside_header('表格') }}
             <dl class="aside-menu-dl">
+                <dd class="act">
+                    {{ aside_menu_title('表格展示', menu_open == 'open') }}
+                    {{ aside_menu_list(table_menu) }}
+                </dd>
 
-                {% set menu1 = [
-                    ('main.index', '表格-01', active == 'index')
-                ] %}
+                <dd>
+                    {{ aside_menu_one(menu_menu) }}
+                </dd>
 
-                {{ aside_menu_list('表格展示', menu1, menu_open == 'open') }}
-                {{ aside_menu_one('菜单管理', 'main.menu_list', active == 'menu') }}
 
             </dl>
         </div>
