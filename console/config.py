@@ -3,22 +3,28 @@ import os
 import json
 
 
-def read_config():
-    path = os.path.abspath(os.path.dirname(__file__))
-    config_path = os.path.join(path, 'config.json')
-    with open(config_path, encoding='utf-8') as f:
-        mysql_info = f.read()
-        mysql_info = json.loads(mysql_info)
-    mysql_dict = mysql_info['mysql']
+class ReadConfigJson(object):
 
-    mysql_url = 'mysql://%s:%s@%s:%s/%s' % (
-        mysql_dict['user'],
-        mysql_dict['password'],
-        mysql_dict['host'],
-        mysql_dict['port'],
-        mysql_dict['database']
-    )
-    return mysql_url
+    def __init__(self):
+        path = os.path.abspath(os.path.dirname(__file__))
+        config_path = os.path.join(path, 'config.json')
+        self.config_path = config_path
+
+    def __read_json(self):
+        with open(self.config_path, encoding='utf-8') as f:
+            data = f.read()
+            data = json.loads(data)
+        return data
+
+    def get_mysql_config(self):
+        mysql_dict = self.__read_json()['mysql']
+        mysql_url = 'mysql+pymysql://{user}:{password}@{host}:{port}/{database}'.format(user=mysql_dict['user'],
+                                                                                        password=mysql_dict['password'],
+                                                                                        host=mysql_dict['host'],
+                                                                                        port=mysql_dict['port'],
+                                                                                        database=mysql_dict['database'])
+
+        return mysql_url
 
 
 class Config:
@@ -26,7 +32,7 @@ class Config:
     # SECRET_KEY = os.urandom(24)
     SECRET_KEY = 'fm'
 
-    SQLALCHEMY_DATABASE_URI = read_config()
+    SQLALCHEMY_DATABASE_URI = ReadConfigJson().get_mysql_config()
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = False

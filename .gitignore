@@ -9,3 +9,5 @@ console/app/static/public/css/*
 console/app/static/public/js/*
 #config.json
 start.sh
+
+venv/

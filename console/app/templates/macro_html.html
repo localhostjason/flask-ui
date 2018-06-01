@@ -8,7 +8,7 @@
 {% endmacro %}
 
 
-{% macro aside_dd_ul_html(title, url_list, open) -%}
+{% macro aside_menu_list(title, url_list, open) -%}
     <dd class="act">
         <a class="aside-menu-v2 aside-menu-v2-toggle {% if open %}open{% endif %}"
            href="javascript:void(0);">
@@ -30,7 +30,7 @@
 {% endmacro %}
 
 
-{% macro aside_dd_html(title, url, act) -%}
+{% macro aside_menu_one(title, url, act) -%}
     <dd>
         <a href="{{ url_for(url) }}"
            class="aside-menu-v2 {% if act %}act{% endif %}">

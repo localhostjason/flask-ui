@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% from 'macro_html.html' import aside_dd_html, aside_dd_ul_html,aside_title %}
+{% from 'macro_html.html' import aside_menu_one, aside_menu_list,aside_title %}
 
 {% block main %}cur{% endblock %}
-{% set active_page = active_page|default('index') %}
-{% set menuv2_page_open = menuv2_page_open|default('close') %}
+{% set active = active | default('index') %}
+{% set menu_open = menu_open | default('close') %}
 
 
 {% block page_content %}
@@ -13,11 +13,11 @@
             <dl class="aside-menu-dl">
 
                 {% set menu1 = [
-                    ('main.index', '表格-01', True if active_page == 'index')
+                    ('main.index', '表格-01', active == 'index')
                 ] %}
 
-                {{ aside_dd_ul_html('表格展示', menu1, True if menuv2_page_open == 'open') }}
-                {{ aside_dd_html('菜单管理', 'main.menu_list', True if active_page == 'menu') }}
+                {{ aside_menu_list('表格展示', menu1, menu_open == 'open') }}
+                {{ aside_menu_one('菜单管理', 'main.menu_list', active == 'menu') }}
 
             </dl>
         </div>
