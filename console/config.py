@@ -27,10 +27,15 @@ class ReadConfigJson(object):
         return mysql_url
 
 
+base_path = os.path.abspath(os.path.dirname(__file__))
+upload_path = os.path.join(base_path, 'upload', 'files')
+print(upload_path)
+
+
 class Config:
     DEBUG = True
     # SECRET_KEY = os.urandom(24)
-    SECRET_KEY = 'fm'
+    SECRET_KEY = 'tc'
 
     SQLALCHEMY_DATABASE_URI = ReadConfigJson().get_mysql_config()
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
@@ -43,6 +48,8 @@ class Config:
     BABEL_DEFAULT_LOCALE = 'zh_Hans_CN'
 
     ASSETS_DEBUG = False
+
+    UPLOADS_DEFAULT_DEST = upload_path
 
     @staticmethod
     def init_app(app):

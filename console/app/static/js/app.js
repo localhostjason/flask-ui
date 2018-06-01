@@ -24,12 +24,12 @@ $(document).ready(function () {
     });
 
 
-    var retract = 'retract';
+    let retract = 'retract';
 
     function expend_aside() {
-        var btn_fold_menu = $('.btn-fold-menu');
-        var text = btn_fold_menu.attr('title');
-        if (text == '收起') {
+        let btn_fold_menu = $('.btn-fold-menu');
+        let text = btn_fold_menu.attr('title');
+        if (text === '收起') {
             btn_fold_menu.addClass(retract);
             btn_fold_menu.attr('title', '展开').text('展开');
             $('.container-fluid-base').css("left", -183);
@@ -41,9 +41,9 @@ $(document).ready(function () {
     }
 
     function resize_width() {
-        var window_width = $(window).width();
-        var btn_fold_menu = $('.btn-fold-menu');
-        var text = btn_fold_menu.attr('title');
+        let window_width = $(window).width();
+        let btn_fold_menu = $('.btn-fold-menu');
+        let text = btn_fold_menu.attr('title');
         if (window_width < 1200) {
             btn_fold_menu.addClass(retract);
             btn_fold_menu.attr('title', '展开').text('展开');
@@ -62,7 +62,7 @@ $(document).ready(function () {
     });
 
 
-    var toggle_menu = $('.aside-menu-v2-toggle');
+    let toggle_menu = $('.aside-menu-v2-toggle');
 
     toggle_menu.each(function (index, el) {
         $(this).click(function () {
@@ -91,13 +91,13 @@ $(document).ready(function () {
 });
 
 $(function dropdownHover($, window, undefined) {
-    var $allDropdowns = $();
+    let $allDropdowns = $();
     $.fn.dropdownHover = function (options) {
 
         $allDropdowns = $allDropdowns.add(this.parent());
 
         return this.each(function () {
-            var $this = $(this).parent(),
+            let $this = $(this).parent(),
                 defaults = {
                     delay: 200,
                     instantlyCloseOthers: true

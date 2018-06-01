@@ -1,0 +1,22 @@
+{% macro input_label(form_field) -%}
+    <label for="" class="control-label pull-right">
+        {% if form_field.flags.required %}<span class="text-danger">*</span>{% endif %}{{ form_field.label.text }}
+    </label>
+{%- endmacro %}
+
+{% macro input(form_field) -%}
+    {{ form_field(class="form-control pull-left", **kwargs) | safe }}
+{%- endmacro %}
+
+{% macro input_validate(form_field) -%}
+    {{ form_field(class="form-control pull-left", **kwargs) | safe }}
+    {% if form_field.errors %}
+        <div class="help-block">
+            <small class="text-danger">
+                {% for error in form_field.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </small>
+        </div>
+    {% endif %}
+{%- endmacro %}
