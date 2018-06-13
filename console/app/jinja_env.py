@@ -8,7 +8,7 @@ class JinjaEnv:
 
     def init_app(self, app):
         app.jinja_env.add_extension('jinja2.ext.loopcontrols')
-        app.jinja_env.filters["to_dict"] = self.to_dict
+        app.jinja_env.filters["loads_jason"] = self.loads_jason
 
     @staticmethod
     def check_json_format(data):
@@ -26,7 +26,7 @@ class JinjaEnv:
             return False
         return True
 
-    def to_dict(self, json_data):
+    def loads_jason(self, json_data):
         if not json_data:
             return
 

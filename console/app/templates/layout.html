@@ -23,6 +23,7 @@
             <div class="header-panel">
                 {% if current_user.is_authenticated %}
                     <ul class="header-menu panel-menu">
+
                         <li class="{% if menu_cur == 'main' %}cur{% endif %}">
                             <a href="{{ url_for('main.index') }}"><i class="glyphicon glyphicon-th-list"></i> 表格</a>
                         </li>

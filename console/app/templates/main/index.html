@@ -10,34 +10,34 @@
             {{ content.panel_title('表格') }}
         </div>
 
-        <div class="col-sm-12" style="margin-top: 20px">
-
-            <div class="pull-left" style="margin-bottom: 20px">
+        <div class="col-sm-12">
+            <div>
                 <a href="#" class="btn btn-primary">新建文件</a>
             </div>
-
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>文件名</th>
-                    <th width="100">拥有者</th>
-                    <th width="100">最后修改时间</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% if none %}
-
-
-                {% else %}
+            <div>
+                <table class="table table-hover">
+                    <thead>
                     <tr>
-                        <td style="padding: 50px 0" colspan="3" align="center">
-                            <span>没有记录</span>
-                        </td>
+                        <th>文件名</th>
+                        <th width="100">拥有者</th>
+                        <th width="100">最后修改时间</th>
                     </tr>
+                    </thead>
+                    <tbody>
+                    {% if none %}
 
-                {% endif %}
-                </tbody>
-            </table>
+
+                    {% else %}
+                        <tr>
+                            <td style="padding: 50px 0" colspan="3" align="center">
+                                <span>没有记录</span>
+                            </td>
+                        </tr>
+
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 {% endblock %}

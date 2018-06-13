@@ -127,7 +127,7 @@ class Tool:
         pass
 
     @staticmethod
-    def time_to_date(localtime):
+    def time_to_date(localtime, format="%Y-%m-%d %H:%M:%S"):
         try:
             int_time = int(localtime)
         except Exception as e:
@@ -135,5 +135,5 @@ class Tool:
             return
 
         t = time.localtime(int_time)
-        format_time = time.strftime("%Y-%m-%d %H:%M:%S", t)
+        format_time = time.strftime(format, t)
         return format_time
