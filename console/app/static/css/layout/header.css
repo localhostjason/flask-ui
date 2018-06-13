@@ -1,5 +1,5 @@
 .header-nav {
-    padding: 0 0 0 179px;
+    padding: 0 0 0 199px;
     background-color: #373d41;
 }
 
@@ -60,7 +60,6 @@
 .header-menu > li:hover > a {
     color: #3d91ff;
     text-decoration: none;
-    font-weight: 700;
 }
 
 .header-menu > li a {

@@ -32,7 +32,7 @@ $(document).ready(function () {
         if (text === '收起') {
             btn_fold_menu.addClass(retract);
             btn_fold_menu.attr('title', '展开').text('展开');
-            $('.container-fluid-base').css("left", -183);
+            $('.container-fluid-base').css("left", -203);
         } else {
             btn_fold_menu.removeClass(retract);
             btn_fold_menu.attr('title', '收起').text('收起');
@@ -47,7 +47,7 @@ $(document).ready(function () {
         if (window_width < 1200) {
             btn_fold_menu.addClass(retract);
             btn_fold_menu.attr('title', '展开').text('展开');
-            $('.container-fluid-base').css("left", -183);
+            $('.container-fluid-base').css("left", -203);
         } else {
             btn_fold_menu.removeClass(retract);
             btn_fold_menu.attr('title', '收起').text('收起');
