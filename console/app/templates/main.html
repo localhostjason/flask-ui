@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% from 'macro/macro_aside.html' import aside_menu_one, aside_menu_list,aside_header, aside_menu_title %}
 
-{% block main %}cur{% endblock %}
-
 {% set active = active | default('index') %}
 {% set menu_open = menu_open | default('index') %}
 {% set menu_cur = 'main' %}
