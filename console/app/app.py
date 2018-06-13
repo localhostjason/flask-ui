@@ -26,7 +26,7 @@ upload_files = UploadSet('files', DOCUMENTS)
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 # message in warning, error, success
-# login_manager.login_message = {'warning': "您还未登录!"}
+login_manager.login_message = {'warning': "您还未登录!"}
 login_manager.login_view = 'auth.login'
 
 

@@ -1,5 +1,6 @@
 {% extends "bootstrap/base.html" %}
 
+{% set menu_cur = menu_cur | default('main') %}
 {% block title %}Flask-tc-ui{% endblock %}
 
 {% block head %}
@@ -22,16 +23,12 @@
             <div class="header-panel">
                 {% if current_user.is_authenticated %}
                     <ul class="header-menu panel-menu">
-                        <li class="{% block main %}{% endblock %}">
+                        <li class="{% if menu_cur == 'main' %}cur{% endif %}">
                             <a href="{{ url_for('main.index') }}"><i class="glyphicon glyphicon-th-list"></i> 表格</a>
                         </li>
 
                         <li class="">
                             <a href="#"><i class="glyphicon glyphicon-file"></i> 表单</a>
-                        </li>
-
-                        <li class="">
-                            <a href="#"><i class="glyphicon glyphicon-asterisk"></i> 其他</a>
                         </li>
                     </ul>
                 {% endif %}

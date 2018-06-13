@@ -17,7 +17,6 @@ common_js = Bundle(
     'vendor/nprogress/nprogress.js',
     'vendor/toastr/toastr.min.js',
     'js/app.js',
-    'vendor/dropzone.js',
     filters='jsmin',
     output='public/js/common.js',
 )

@@ -4,7 +4,8 @@
 {% block main %}cur{% endblock %}
 
 {% set active = active | default('index') %}
-{% set menu_open = menu_open | default('close') %}
+{% set menu_open = menu_open | default('index') %}
+{% set menu_cur = 'main' %}
 
 {% set table_menu = [
 ('表格-01', 'main.index', active == 'index'),
@@ -19,7 +20,7 @@
             {{ aside_header('表格') }}
             <dl class="aside-menu-dl">
                 <dd class="act">
-                    {{ aside_menu_title('表格展示', menu_open == 'open') }}
+                    {{ aside_menu_title('表格展示', menu_open == 'index') }}
                     {{ aside_menu_list(table_menu) }}
                 </dd>
 

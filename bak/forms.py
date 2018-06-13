@@ -6,3 +6,7 @@ from ..base import BaseForm
 
 from ..app import upload_files
 
+
+class FileForm(FlaskForm, BaseForm):
+    file = FileField('file', validators=[FileRequired('不允许为空'), FileAllowed(upload_files, '只允许文本文档')])
+    submit = SubmitField('submit')

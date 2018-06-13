@@ -90,14 +90,14 @@ $(document).ready(function () {
 
 });
 
-$(function dropdownHover($, window, undefined) {
+;(function ($, window, undefined) {
     let $allDropdowns = $();
     $.fn.dropdownHover = function (options) {
 
         $allDropdowns = $allDropdowns.add(this.parent());
 
         return this.each(function () {
-            let $this = $(this).parent(),
+            var $this = $(this).parent(),
                 defaults = {
                     delay: 200,
                     instantlyCloseOthers: true
@@ -124,7 +124,7 @@ $(function dropdownHover($, window, undefined) {
     };
 
     $('[data-hover="dropdown"]').dropdownHover();
-});
+})(jQuery, this);
 
 
 $(document).ready(function () {
