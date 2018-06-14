@@ -1,5 +1,9 @@
-.table-hover > tbody > tr:hover {
-    background-color: #eaf6f9;
+.table-no-data {
+    height: 11px;
+    padding-top: 90px;
+    background: url(/static/img/table-nodata-bg.png) no-repeat 50% 0;
+    text-align: center;
+    font-size: 14px;
 }
 
 .table {
@@ -24,10 +28,35 @@
     vertical-align: middle;
 }
 
+.table-hover > tbody > tr:hover {
+    background-color: #eaf6f9;
+}
+
 .table.table-bordered {
     border: 0;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
+}
+
+.td-input {
+    height: 25px;
+    border: 1px solid #d1d2d3;
+    float: left;
+    font-size: 12px;
+    line-height: 25px;
+    resize: none;
+    max-height: 150px;
+    position: relative;
+    z-index: 0;
+}
+
+.td-input:hover {
+    border-color: #b4b7bf;
+    z-index: 1;
+}
+
+td label {
+    margin-bottom: 2px !important;
 }
 
 .table-add-btn {
@@ -36,4 +65,61 @@
     width: 100%;
     position: relative;
     bottom: auto;
+}
+
+.td-right-border {
+    border-right: 1px solid #ddd;
+}
+
+/* tbale 排序*/
+.tc-table-panel thead .tc-th-sort-btn {
+    color: #454951;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding-right: 10px;
+}
+
+.tc-table-panel thead .tc-th-sort-btn span {
+    max-width: 88%;
+    margin-right: 5px;
+}
+
+.sort-icon {
+    width: 8px;
+    height: 12px;
+    background-image: url(/static/img/bee.png);
+    background-position: -233px -46px;
+}
+
+.tc-table-panel thead .tc-th-sort-btn i.filtrate-icon,
+.tc-table-panel thead .tc-th-sort-btn i.sort-icon,
+.tc-table-panel thead .tc-th-sort-btn.current i.down-sort-icon,
+.tc-table-panel thead .tc-th-sort-btn.current i.up-sort-icon {
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+}
+
+.tc-table-panel thead .tc-th-sort-btn:hover .sort-icon {
+    background-image: url(/static/img/bee.png);
+    background-position: -233px -60px;
+}
+
+.tc-table-panel thead .tc-th-sort-btn:hover {
+    color: #2277da;
+}
+
+.up-sort-icon {
+    width: 8px;
+    height: 11px;
+    background-image: url(/static/img/bee.png);
+    background-position: -233px -87px;
+}
+
+.down-sort-icon {
+    width: 8px;
+    height: 11px;
+    background-image: url(/static/img/bee.png);
+    background-position: -233px -74px;
 }

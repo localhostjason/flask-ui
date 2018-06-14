@@ -35,7 +35,3 @@ body > .container-fluid-base {
     overflow-y: auto;
     overflow-x: hidden;
 }
-
-.console-container {
-    padding: 0 20px;
-}

@@ -1,0 +1,12 @@
+.alert {
+    padding: 6px 12px;
+    line-height: 18px;
+    margin-bottom: 6px;
+    border-radius: 0;
+}
+
+.alert-info {
+    color: #555;
+    background-color: #F9F9F9;
+    border-color: #DDD;
+}

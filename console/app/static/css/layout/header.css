@@ -60,6 +60,7 @@
 .header-menu > li:hover > a {
     color: #3d91ff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .header-menu > li a {

@@ -1,0 +1,118 @@
+/* a */
+
+a {
+    cursor: pointer;
+}
+
+a, a:hover, a:focus, a:active {
+    color: #3399ff;
+}
+
+.text-danger {
+    color: #F00 !important;
+}
+
+.text-explode {
+    color: #CCC !important;
+    font-weight: normal !important;
+    margin: 0 4px !important;
+}
+
+.text-danger {
+    color: #F00 !important;
+}
+
+.text-gray {
+    color: #999999;
+}
+
+.text-success {
+    color: #090;
+}
+
+.text-warning {
+    color: #F90 !important;
+}
+
+.text-gray-lg {
+    color: #666666;
+}
+
+.pagination {
+    margin: 0;
+    border-radius: 2px;
+    position: relative;
+    top: 2px;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    border-radius: 2px;
+}
+
+.popover {
+    font-size: 12px !important;
+    border-radius: 3px;
+    max-width: 100%;
+}
+
+.modal-title {
+    font-size: 14px;
+}
+
+.modal-backdrop {
+    background-color: #FFF;
+}
+
+.modal, .modal-open {
+    overflow: auto;
+    overflow-y: auto;
+}
+
+.modal-content {
+    border-radius: 0;
+    /*border: 1px solid #999;*/
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    font-weight: normal;
+}
+
+label.control-label {
+    font-weight: normal;
+    font-size: 12px;
+    color: #666;
+}
+
+.label_border {
+    border: 1px solid #409eff;
+    padding: 4px 10px;
+}
+
+.blue-add-icon {
+    width: 15px;
+    height: 15px;
+    background-image: url(/static/img/bee.png);
+    background-position: -215px -105px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.tc-search-words {
+    height: 25px;
+    border: 1px solid #d1d2d3;
+    float: left;
+    font-size: 12px;
+    line-height: 25px;
+    padding: 0 10px;
+    resize: none;
+    max-height: 150px;
+    position: relative;
+    z-index: 0;
+}

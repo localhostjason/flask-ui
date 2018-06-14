@@ -1,22 +1,3 @@
-.btn-toinstlist .icon-toinstlist {
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    vertical-align: middle;
-    background: url(/static/img/toinstlist.png) center 1px no-repeat;
-}
-
-.btn-toinstlist {
-    border: 1px solid #BBB;
-    color: #666;
-    text-shadow: none;
-    vertical-align: middle;
-}
-
-.btn {
-    border-radius: 0;
-}
-
 .btn.btn-primary.disabled,
 .btn.btn-primary[disabled] {
     text-shadow: none;
@@ -26,6 +7,10 @@
     color: #fff !important;
     border: 1px solid #ccc !important;
     background-color: #ccc !important;
+}
+
+.bline-dotted {
+    border-bottom: 1px dotted #000;
 }
 
 .btn {
@@ -50,15 +35,55 @@
     background-color: #28B5D6;
 }
 
-.form-inline .form-group {
-    margin: 4px 8px 4px 0;
-}
-
 .btn-xs {
     font-size: 12px;
     padding: 2px 8px;
     height: 20px;
     line-height: 14px;
+}
+
+.btn-sm {
+    font-size: 12px;
+    padding: 4px 12px;
+    height: 24px;
+    line-height: 14px;
+}
+
+.btn-default {
+    color: #333;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+}
+
+.btn-toinstlist .icon-toinstlist {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(/static/img/toinstlist.png) center 1px no-repeat;
+}
+
+.btn-toinstlist {
+    border: 1px solid #BBB;
+    color: #666;
+    text-shadow: none;
+    vertical-align: middle;
+}
+
+.btn.disabled, .btn[disabled] {
+    text-shadow: none;
+    filter: none;
+    opacity: 1;
+    color: #bbb;
+    border: 1px solid #ddd;
+    background-color: #F7F7F7;
+    cursor: default;
+}
+
+.btn.disabled:hover, .btn[disabled]:hover {
+    color: #bbb;
+    border: 1px solid #ddd;
+    background-color: #F7F7F7;
 }
 
 .btn-blue {
@@ -90,4 +115,18 @@
     text-decoration: none;
     background: #0f85fb;
     border-color: #adadad;
+}
+
+.tc-btn {
+    border: 1px solid #0064b6;
+    background: #2277da;
+    color: #fff;
+
+}
+
+.tc-btn:focus, .tc-btn:hover {
+    border-color: #005da8;
+    background: #006ba2;
+    color: #fff;
+    text-decoration: none;
 }

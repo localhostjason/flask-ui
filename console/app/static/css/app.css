@@ -1,17 +1,18 @@
 body {
+    /*font-size: 12px;*/
     padding: 0;
     margin: 0;
     line-height: 1;
-    font-size: 12px;
+    font: 12px Helvetica Neue, Helvetica, PingFang SC, \5FAE\8F6F\96C5\9ED1, Tahoma, Arial, sans-serif;
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
 }
 
 body, button, dd, dl, dt, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, textarea, ul {
     margin: 0;
     padding: 0;
-}
-
-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: PingFangSC-Light, 'helvetica neue', 'hiragino sans gb', tahoma, 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
 }
 
 body .toast-top-right {
@@ -29,18 +30,18 @@ li {
     margin-top: 20px;
 }
 
-.text-danger {
-    color: #F00 !important;
+.console-container {
+    padding: 0 20px;
 }
 
-/* a */
-
-a {
-    cursor: pointer;
+console-title h4 {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
 }
 
-a, a:hover, a:focus, a:active {
-    color: #3399ff;
+.console-title .btn-toinstlist {
+    margin-top: 6px;
+
 }
 
 .console-title h5 {
@@ -65,23 +66,21 @@ a, a:hover, a:focus, a:active {
     color: #555;
 }
 
-.bline {
-    border-bottom: 1px solid #eee;
-}
-
 .console-title {
     padding: 16px 0;
     min-height: 48px;
 }
 
-label {
-    font-weight: normal;
+.console-title-border {
+    border-bottom: 1px solid #DDD;
 }
 
-label.control-label {
-    font-weight: normal;
-    font-size: 12px;
-    color: #666;
+.console-box-border {
+    border: 1px solid #E1E6EB;
+}
+
+.bline {
+    border-bottom: 1px solid #eee;
 }
 
 .top-line {
@@ -91,10 +90,4 @@ label.control-label {
 
 .bline-dotted {
     border-bottom: 1px dotted #000;
-}
-
-.text-explode {
-    color: #CCC !important;
-    font-weight: normal !important;
-    margin: 0 4px !important;
 }

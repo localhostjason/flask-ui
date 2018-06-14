@@ -6,7 +6,8 @@
 {% set menu_cur = 'main' %}
 
 {% set table_menu = [
-('表格-01', 'main.index', active == 'index'),
+('表格-01', 'main.index', active == 'index', 'fa fa-television'),
+('表格-02', 'main.menu_list', active == 'ssss', 'fa fa-television'),
 ] %}
 
 {% set menu_menu = [('菜单管理', 'main.menu_list', active == 'menu')] %}
@@ -18,12 +19,12 @@
             {{ aside_header('表格') }}
             <dl class="aside-menu-dl">
                 <dd class="act">
-                    {{ aside_menu_title('表格展示', menu_open == 'index') }}
+                    {{ aside_menu_title('表格展示', menu_open == 'index', 'fa fa-home') }}
                     {{ aside_menu_list(table_menu) }}
                 </dd>
 
                 <dd>
-                    {{ aside_menu_one(menu_menu) }}
+                    {{ aside_menu_one(menu_menu, 'fa fa-file-o') }}
                 </dd>
 
 

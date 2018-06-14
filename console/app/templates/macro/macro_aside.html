@@ -8,33 +8,33 @@
 {% endmacro %}
 
 
-{% macro aside_menu_title(title, open) -%}
+{% macro aside_menu_title(title, open, icon) -%}
     <a class="aside-menu-v2 aside-menu-v2-toggle {% if open %}open{% endif %}"
        href="javascript:void(0);">
-        <span>{{ title }}</span>
+        <span><i class="{{ icon }}"></i> {{ title }}</span>
         <i class="white-down-icon"></i>
     </a>
 {% endmacro %}
 
 {% macro aside_menu_list(url_list) -%}
     <ul class="aside-menu-sub aside-menu-sub-disable">
-        <li>
-            {% for name, url, url_act in url_list %}
+        {% for name, url, url_act, icon in url_list %}
+            <li>
                 <a href="{{ url_for(url) }}"
                    class="aside-menu-v3 {% if url_act %}act{% endif %}">
-                    <i class="ico-dot"></i><span>{{ name }}</span>
+                    <i class="ico-dot {{ icon }}"></i><span>{{ name }}</span>
                 </a>
-            {% endfor %}
-        </li>
+            </li>
+        {% endfor %}
     </ul>
 {% endmacro %}
 
 
-{% macro aside_menu_one(menu) -%}
+{% macro aside_menu_one(menu, icon) -%}
     {% for title, url, act in menu %}
         <a href="{{ url_for(url) }}"
            class="aside-menu-v2 {% if act %}act{% endif %}">
-            <span>{{ title }}</span>
+            <span><i class="{{ icon }}"></i> {{ title }}</span>
         </a>
     {% endfor %}
 {% endmacro %}
