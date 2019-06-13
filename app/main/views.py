@@ -5,7 +5,6 @@ from flask_login import login_required
 from . import main
 from .forms import *
 from ..base import Check
-from ..app import upload_files
 from config import Config
 import os
 from datetime import datetime

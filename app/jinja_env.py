@@ -11,17 +11,15 @@ class JinjaEnv:
         app.jinja_env.filters["loads_jason"] = self.loads_jason
 
     @staticmethod
-    def check_json_format(data):
+    def check_json_format(str_data):
         """
         用于判断一个字符串是否符合Json格式
-        :param self:
-        :return:
         """
-        if not isinstance(data, str):
+        if not isinstance(str_data, str):
             return False
 
         try:
-            json.loads(data)
+            json.loads(str_data)
         except ValueError:
             return False
         return True

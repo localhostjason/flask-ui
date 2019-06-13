@@ -35,12 +35,9 @@ class User(UserMixin, db.Model):
     def verify_password(self, password):
         return check_password_hash(self.password_hash, password)
 
-    @classmethod
-    def update_time_ip(cls):
-        user = cls.query.filter(cls.username == current_user.username).first_or_404()
-        user.login_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        user.login_ip = request.remote_addr
-        db.session.add(user)
+    def update_time_ip(self):
+        self.login_time = datetime.now()
+        self.login_ip = request.remote_addr
 
     def generate_auth_token(self, expiration):
         s = Serializer(current_app.config['SECRET_KEY'], expires_in=expiration)

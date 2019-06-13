@@ -22,13 +22,16 @@ manager.add_command('assets', ManageAssets(assets_env=assets_env))
 
 @manager.command
 def deploy():
+    # 创建内置用户
+    User.insert_admin()
+
+
+@manager.command
+def update_db():
     from flask_migrate import upgrade, migrate
     # 把数据库迁移到最新修订版本
     migrate()
     upgrade()
-
-    # 创建内置用户
-    User.insert_admin()
 
 
 if __name__ == '__main__':
