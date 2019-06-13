@@ -34,4 +34,5 @@ body > .container-fluid-base {
     background-color: #fff;
     overflow-y: auto;
     overflow-x: hidden;
+    min-width: 1000px;
 }
