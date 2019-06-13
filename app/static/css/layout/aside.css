@@ -54,7 +54,7 @@
 }
 
 .aside-menu a.act, .aside-menu a:active {
-    color: #3399ff;
+    color: #1683f1;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     position: relative;
@@ -67,11 +67,11 @@
 
 .aside-menu-dl .aside-menu-v2:hover {
     background-color: #d5e2ef;
-    color: #3399ff;
+    color: #1683f1;
 }
 
 .aside-menu-v2.aside-menu-v2-toggle.open {
-    color: #3399ff;
+    color: #1683f1;
 }
 
 .aside-menu a {
