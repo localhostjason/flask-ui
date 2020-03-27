@@ -1,0 +1,7 @@
+第一次：
+pip install -r requirements.txt
+python manage.py db init
+python manage.py deploy
+
+以后每次想运行程序:
+python manage.py runserver
