@@ -30,8 +30,8 @@ python manage.py runserver
 
 
 
-![image-20230109144027992](.\images\image-20230109144027992.png)
+![image-20230109144027992](./images/image-20230109144027992.png)
 
 
 
-![image-20230109144202866](.\images\image-20230109144202866.png)
+![image-20230109144202866](./images/image-20230109144202866.png)
